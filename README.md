@@ -108,7 +108,7 @@ http://localhost:8000/docs
 
 The app is ready to deploy as two services:
 
-- Frontend: deploy the `frontend/` folder to Vercel or another Next.js host.
+- Frontend: configured for Render at `https://springstreet-dashboard.onrender.com`.
 - Backend: deployed on Render at `https://springstreet-api.onrender.com`.
 
 Required frontend environment variable: `NEXT_PUBLIC_API_URL`, set to the full URL of the deployed FastAPI backend.
@@ -154,6 +154,6 @@ I kept these formulas in plain pandas/numpy code so they are easy to audit.
 
 - Add a clearer benchmark comparison view against `SPY`.
 - Add date-range controls instead of always showing the default 5-year period.
-- Add platform-specific deployment files once the hosting choice is final.
+- Add better deployment monitoring and error reporting for hosted services.
 - Add more tests around edge cases like missing market-data columns or short ticker histories.
 - Add a small screenshot section after deployment so the README is easier to scan.

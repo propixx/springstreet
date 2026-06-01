@@ -18,4 +18,5 @@ TRADING_DAYS_PER_YEAR = 252
 CORS_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://springstreet-dashboard.onrender.com",
 ]
