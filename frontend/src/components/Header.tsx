@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { API_BASE_URL } from "@/lib/constants";
 
 export function Header() {
   return (
@@ -11,7 +12,7 @@ export function Header() {
 
         <nav className="nav-links" aria-label="Main navigation">
           <Link href="/">Dashboard</Link>
-          <a href="http://localhost:8000/docs">API Docs</a>
+          <a href={`${API_BASE_URL}/docs`}>API Docs</a>
         </nav>
       </div>
     </header>
