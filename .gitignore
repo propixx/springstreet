@@ -1,0 +1,13 @@
+work/
+outputs/
+
+backend/.pytest_cache/
+backend/**/__pycache__/
+backend/cache/*.json
+!backend/cache/.gitkeep
+
+frontend/.next/
+frontend/node_modules/
+frontend/out/
+frontend/.env.local
+frontend/*.log
