@@ -109,11 +109,11 @@ http://localhost:8000/docs
 The app is ready to deploy as two services:
 
 - Frontend: deploy the `frontend/` folder to Vercel or another Next.js host.
-- Backend: deploy the `backend/` folder to Render, Railway, or another Python/FastAPI host.
+- Backend: deployed on Render at `https://springstreet-api.onrender.com`.
 
 Required frontend environment variable: `NEXT_PUBLIC_API_URL`, set to the full URL of the deployed FastAPI backend.
 
-I did not add platform-specific deployment files because the exact hosting target was not fixed in the assignment. No live backend URL is hard-coded in this repository. If the backend is hosted on a free tier, the first request may take a few seconds because of cold start. Live market data can also be affected by Yahoo Finance or `yfinance` availability.
+The backend uses Render's free plan, so the first request may take a few seconds because of cold start. Live market data can also be affected by Yahoo Finance or `yfinance` availability.
 
 ## Checks
 
