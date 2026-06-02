@@ -104,15 +104,15 @@ export function PortfolioCharts({ portfolio, loading, error, onRetry }: Portfoli
               <AreaChart data={portfolio.daily_values}>
                 <defs>
                   <linearGradient id="portfolioValue" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stopColor="#36d399" stopOpacity={0.35} />
-                    <stop offset="100%" stopColor="#36d399" stopOpacity={0.03} />
+                    <stop offset="0%" stopColor="#15803d" stopOpacity={0.22} />
+                    <stop offset="100%" stopColor="#15803d" stopOpacity={0.03} />
                   </linearGradient>
                 </defs>
-                <CartesianGrid stroke="rgba(255,255,255,0.06)" vertical={false} />
-                <XAxis dataKey="date" minTickGap={36} stroke="#98a7a3" tick={{ fontSize: 12 }} />
+                <CartesianGrid stroke="#e5e7eb" vertical={false} />
+                <XAxis dataKey="date" minTickGap={36} stroke="#6b7280" tick={{ fontSize: 12 }} />
                 <YAxis
                   domain={["dataMin", "dataMax"]}
-                  stroke="#98a7a3"
+                  stroke="#6b7280"
                   tick={{ fontSize: 12 }}
                   tickFormatter={(value: number) => formatCurrency(value)}
                   width={76}
@@ -126,7 +126,7 @@ export function PortfolioCharts({ portfolio, loading, error, onRetry }: Portfoli
                   dataKey="value"
                   fill="url(#portfolioValue)"
                   isAnimationActive={false}
-                  stroke="#36d399"
+                  stroke="#15803d"
                   strokeWidth={2}
                   type="monotone"
                 />
@@ -184,9 +184,9 @@ export function PortfolioCharts({ portfolio, loading, error, onRetry }: Portfoli
           <div className="rechart-box">
             <ResponsiveContainer width="100%" height={260}>
               <BarChart data={holdingReturnData}>
-                <CartesianGrid stroke="rgba(255,255,255,0.06)" vertical={false} />
-                <XAxis dataKey="ticker" stroke="#98a7a3" tick={{ fontSize: 12 }} />
-                <YAxis stroke="#98a7a3" tick={{ fontSize: 12 }} tickFormatter={(value: number) => `${value}%`} />
+                <CartesianGrid stroke="#e5e7eb" vertical={false} />
+                <XAxis dataKey="ticker" stroke="#6b7280" tick={{ fontSize: 12 }} />
+                <YAxis stroke="#6b7280" tick={{ fontSize: 12 }} tickFormatter={(value: number) => `${value}%`} />
                 <Tooltip
                   contentStyle={tooltipStyle}
                   formatter={(value, name) => [formatPercent(Number(value)), name === "return_pct" ? "Return" : "Contribution"]}
@@ -222,8 +222,8 @@ export function PortfolioCharts({ portfolio, loading, error, onRetry }: Portfoli
 }
 
 const tooltipStyle = {
-  background: "#11161b",
-  border: "1px solid #27313a",
+  background: "#ffffff",
+  border: "1px solid #e5e7eb",
   borderRadius: "8px",
-  color: "#ecf3f1"
+  color: "#1f2937"
 };

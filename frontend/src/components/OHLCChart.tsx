@@ -41,7 +41,7 @@ export function OHLCChart({ data, loading, error, onRetry, ticker }: OHLCChartPr
       data.map((point) => ({
         time: point.date,
         value: point.volume,
-        color: point.close >= point.open ? "rgba(54, 211, 153, 0.38)" : "rgba(255, 107, 107, 0.38)"
+        color: point.close >= point.open ? "rgba(21, 128, 61, 0.26)" : "rgba(220, 38, 38, 0.24)"
       })),
     [data]
   );
@@ -56,18 +56,18 @@ export function OHLCChart({ data, loading, error, onRetry, ticker }: OHLCChartPr
       width: container.clientWidth,
       height: 430,
       layout: {
-        background: { type: ColorType.Solid, color: "#161d23" },
-        textColor: "#98a7a3"
+        background: { type: ColorType.Solid, color: "#ffffff" },
+        textColor: "#6b7280"
       },
       grid: {
-        vertLines: { color: "rgba(255, 255, 255, 0.05)" },
-        horzLines: { color: "rgba(255, 255, 255, 0.05)" }
+        vertLines: { color: "rgba(229, 231, 235, 0.72)" },
+        horzLines: { color: "rgba(229, 231, 235, 0.72)" }
       },
       rightPriceScale: {
-        borderColor: "rgba(255, 255, 255, 0.12)"
+        borderColor: "#e5e7eb"
       },
       timeScale: {
-        borderColor: "rgba(255, 255, 255, 0.12)",
+        borderColor: "#e5e7eb",
         timeVisible: false
       },
       crosshair: {
@@ -76,12 +76,12 @@ export function OHLCChart({ data, loading, error, onRetry, ticker }: OHLCChartPr
     });
 
     const candles = chart.addSeries(CandlestickSeries, {
-      upColor: "#36d399",
-      downColor: "#ff6b6b",
-      borderUpColor: "#36d399",
-      borderDownColor: "#ff6b6b",
-      wickUpColor: "#36d399",
-      wickDownColor: "#ff6b6b"
+      upColor: "#15803d",
+      downColor: "#dc2626",
+      borderUpColor: "#15803d",
+      borderDownColor: "#dc2626",
+      wickUpColor: "#15803d",
+      wickDownColor: "#dc2626"
     });
 
     const volume = chart.addSeries(

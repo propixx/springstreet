@@ -14,9 +14,9 @@ export const TICKER_NAMES: Record<Ticker, string> = {
 };
 
 export const TICKER_COLORS: Record<Ticker, string> = {
-  AAPL: "#4fb3ff",
-  MSFT: "#36d399",
-  AMZN: "#f4b860",
-  JPM: "#7aa2ff",
-  JNJ: "#ff7ab6"
+  AAPL: "#2563eb",
+  MSFT: "#15803d",
+  AMZN: "#b7791f",
+  JPM: "#7c3aed",
+  JNJ: "#be185d"
 };
